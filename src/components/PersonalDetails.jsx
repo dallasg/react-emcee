@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaUser, FaEnvelope } from 'react-icons/fa';
 
 const PersonalDetails = ({ data, onChange, onNext }) => {
   const [errors, setErrors] = React.useState({});
@@ -21,36 +22,53 @@ const PersonalDetails = ({ data, onChange, onNext }) => {
   };
 
   return (
-    <div>
-      <h2>Personal Details</h2>
-      <div>
-        <label>First Name:</label>
-        <input
-          type="text"
-          value={data.firstName}
-          onChange={(e) => onChange('firstName', e.target.value)}
-        />
-        {errors.firstName && <span>{errors.firstName}</span>}
+    <div className="p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-semibold mb-4">Personal Details</h2>
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700">First Name:</label>
+        <div className="flex items-center">
+          <FaUser className="mr-2 text-gray-500" />
+          <input
+            type="text"
+            value={data.firstName}
+            onChange={(e) => onChange('firstName', e.target.value)}
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          />
+        </div>
+        {errors.firstName && <span className="text-red-500 text-sm">{errors.firstName}</span>}
       </div>
-      <div>
-        <label>Last Name:</label>
-        <input
-          type="text"
-          value={data.lastName}
-          onChange={(e) => onChange('lastName', e.target.value)}
-        />
-        {errors.lastName && <span>{errors.lastName}</span>}
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700">Last Name:</label>
+        <div className="flex items-center">
+          <FaUser className="mr-2 text-gray-500" />
+          <input
+            type="text"
+            value={data.lastName}
+            onChange={(e) => onChange('lastName', e.target.value)}
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          />
+        </div>
+        {errors.lastName && <span className="text-red-500 text-sm">{errors.lastName}</span>}
       </div>
-      <div>
-        <label>Email:</label>
-        <input
-          type="text"
-          value={data.email}
-          onChange={(e) => onChange('email', e.target.value)}
-        />
-        {errors.email && <span>{errors.email}</span>}
+      <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700">Email:</label>
+        <div className="flex items-center">
+          <FaEnvelope className="mr-2 text-gray-500" />
+          <input
+            type="email"
+            value={data.email}
+            onChange={(e) => onChange('email', e.target.value)}
+            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          />
+        </div>
+        {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
       </div>
-      <button onClick={handleNext}>Next</button>
+      <button
+        onClick={handleNext}
+        className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+      >
+        Next
+      </button>
     </div>
   );
 };
