@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaCalendarAlt, FaMicrophone } from 'react-icons/fa';
+import React from "react";
+import { FaCalendarAlt, FaMicrophone } from "react-icons/fa";
 
 const ConferenceDetails = ({ data, onChange, onNext, onPrevious }) => {
   const [errors, setErrors] = React.useState({});
@@ -34,7 +34,7 @@ const ConferenceDetails = ({ data, onChange, onNext, onPrevious }) => {
             value={data.attendingDays}
             onChange={(e) =>
               onChange(
-                'attendingDays',
+                "attendingDays",
                 Array.from(e.target.selectedOptions, (option) => option.value)
               )
             }
@@ -52,7 +52,7 @@ const ConferenceDetails = ({ data, onChange, onNext, onPrevious }) => {
           <input
             type="checkbox"
             checked={data.isSpeaker}
-            onChange={(e) => onChange('isSpeaker', e.target.checked)}
+            onChange={(e) => onChange("isSpeaker", e.target.checked)}
             className="mr-2"
           />
           I am a speaker
@@ -66,7 +66,7 @@ const ConferenceDetails = ({ data, onChange, onNext, onPrevious }) => {
             <input
               type="text"
               value={data.topic}
-              onChange={(e) => onChange('topic', e.target.value)}
+              onChange={(e) => onChange("topic", e.target.value)}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             />
           </div>

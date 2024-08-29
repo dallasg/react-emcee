@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
+import React from "react";
+import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
 const ReviewAndSubmit = ({ data, onPrevious, onSubmit }) => {
   const [loading, setLoading] = React.useState(false);
@@ -33,7 +33,7 @@ const ReviewAndSubmit = ({ data, onPrevious, onSubmit }) => {
       </div>
       <div className="mb-4">
         <h3 className="text-xl font-semibold mb-2">Conference Details</h3>
-        <p><strong>Attending Days:</strong> {data.attendingDays.join(', ')}</p>
+        <p><strong>Attending Days:</strong> {data.attendingDays.join(", ")}</p>
         {data.isSpeaker && (
           <p><strong>Topic:</strong> {data.topic}</p>
         )}
@@ -53,10 +53,10 @@ const ReviewAndSubmit = ({ data, onPrevious, onSubmit }) => {
         </button>
         <button
           onClick={handleSubmit}
-          className={`bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 ${loading && 'opacity-50 cursor-not-allowed'}`}
+          className={`bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 ${loading && "opacity-50 cursor-not-allowed"}`}
           disabled={loading}
         >
-          {loading ? 'Submitting...' : 'Submit'}
+          {loading ? "Submitting..." : "Submit"}
         </button>
       </div>
     </div>

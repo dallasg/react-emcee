@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaUser, FaEnvelope } from 'react-icons/fa';
+import React from "react";
+import { FaUser, FaEnvelope } from "react-icons/fa";
 
 const PersonalDetails = ({ data, onChange, onNext }) => {
   const [errors, setErrors] = React.useState({});
@@ -31,7 +31,7 @@ const PersonalDetails = ({ data, onChange, onNext }) => {
           <input
             type="text"
             value={data.firstName}
-            onChange={(e) => onChange('firstName', e.target.value)}
+            onChange={(e) => onChange("firstName", e.target.value)}
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
           />
         </div>
@@ -44,7 +44,7 @@ const PersonalDetails = ({ data, onChange, onNext }) => {
           <input
             type="text"
             value={data.lastName}
-            onChange={(e) => onChange('lastName', e.target.value)}
+            onChange={(e) => onChange("lastName", e.target.value)}
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
           />
         </div>
@@ -57,7 +57,7 @@ const PersonalDetails = ({ data, onChange, onNext }) => {
           <input
             type="email"
             value={data.email}
-            onChange={(e) => onChange('email', e.target.value)}
+            onChange={(e) => onChange("email", e.target.value)}
             className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
           />
         </div>

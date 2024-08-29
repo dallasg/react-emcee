@@ -1,18 +1,18 @@
-import React from 'react';
-import PersonalDetails from './components/PersonalDetails';
-import ConferenceDetails from './components/ConferenceDetails';
-import ReviewAndSubmit from './components/ReviewAndSubmit';
-import StepNavigation from './components/StepNavigation';
+import React from "react";
+import PersonalDetails from "./components/PersonalDetails";
+import ConferenceDetails from "./components/ConferenceDetails";
+import ReviewAndSubmit from "./components/ReviewAndSubmit";
+import StepNavigation from "./components/StepNavigation";
 
 const App = () => {
   const [step, setStep] = React.useState(1);
   const [formData, setFormData] = React.useState({
-    firstName: '',
-    lastName: '',
-    email: '',
+    firstName: "",
+    lastName: "",
+    email: "",
     attendingDays: [],
     isSpeaker: false,
-    topic: ''
+    topic: ""
   });
 
   const handleNext = () => setStep(step + 1);
@@ -23,7 +23,7 @@ const App = () => {
   };
 
   const handleSubmit = () => {
-    console.log('Registration Submitted', formData);
+    console.log("Registration Submitted", formData);
     // Reset form or navigate to a success page
   };
 
